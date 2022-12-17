@@ -9,22 +9,25 @@
     <!-- https://www.bootstrapcdn.com/ -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.js"></script>
     <script src="https://unpkg.com/vue@next"></script>
-    <title>Generic table</title>
+    <title>PureAir</title>
 </head>
 
 <body>
-    <h1>Generic table</h1>
+    <h1>PureAir</h1>
     <div id="app">
-        <table class="table table-striped table-bordered table-hover">
-            <tr>
-                <th v-for="(value,name) in data[0]">{{name}}</th>
-                <!-- Pick attribute names from first row in data -->
-            </tr>
-            <tr v-for="row in data">
-                <td v-for="d in row">{{d}}</td>
-                <!-- nothing said about attribute names in data -->
-            </tr>
-        </table>
+    <div class="container-fluid">
+    <table class="table table-striped table-bordered table-hover">
+        <tr>
+            <th v-for="(value,name) in data[0]">{{name}}</th>
+            <!-- Pick attribute names from first row in data -->
+        </tr>
+        <tr v-for="row in data">
+            <td v-for="d in row">{{d}}</td>
+            <!-- nothing said about attribute names in data -->
+        </tr>
+    </table>
+    </div>
+
     </div>
     <script src="js/index.js"></script>
 </body>
